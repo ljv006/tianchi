@@ -68,6 +68,7 @@ with tf.Session() as sess:
     # print "Accuracy:", accuracy.eval({x:input_x[:1000], y: input_y[:1000]})
 
     test_file = open("input/test_data","r")
+
     test_x = []
     test_y = []
     for line in test_file:
