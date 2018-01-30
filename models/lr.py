@@ -1,9 +1,8 @@
 #encoding:utf-8
 
 import tensorflow as tf
-# 装在MNIST数据
-from tensorflow.examples.tutorials.mnist import input_data
-file = open("train_data", "r")
+
+file = open("input/train_data", "r")
 input_x = []
 input_y = []
 for line in file:
@@ -68,7 +67,7 @@ with tf.Session() as sess:
     # accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
     # print "Accuracy:", accuracy.eval({x:input_x[:1000], y: input_y[:1000]})
 
-    test_file = open("test_data","r")
+    test_file = open("input/test_data","r")
     test_x = []
     test_y = []
     for line in test_file:
@@ -76,7 +75,7 @@ with tf.Session() as sess:
         test_x.append([float(list[0]) / 1579, float(list[1]) / 7])
     test_y = (tf.matmul(test_x, W) + b) * 7226
     res = test_y.eval()
-    out_file = open("out", "w")
+    out_file = open("output/out", "w")
     index = 1032
     for num in res:
         temp = str(num).strip("[]").strip()

@@ -1,7 +1,7 @@
 #coding=utf-8
 
-file = open('train_20171215.txt', 'r')
-out_file = open('res.txt', 'w')
+file = open('input/train_20171215.txt', 'r')
+out_file = open('output/res.txt', 'w')
 my_dict = {}
 count = 1
 my_dict[count] = 0
