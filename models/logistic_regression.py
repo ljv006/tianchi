@@ -10,7 +10,6 @@ for line in file:
     input_x.append([float(list[0]) / 1032, float(list[1]) / 7])
     input_y.append([float(list[2]) / 7226])
 # 一些参数
-learning_rate = 0.01
 training_epochs = 1000
 batch_size = 100
 display_step = 1
@@ -32,7 +31,7 @@ cost = tf.reduce_mean(tf.square(pred - y))
 tf.summary.scalar('learnging_rate', learning_rate)
 tf.summary.scalar('cost', cost)
 # 梯度下降优化
-optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
+optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost,global_step=global_step)
 # 初始化所有变量
 init = tf.initialize_all_variables()
 
