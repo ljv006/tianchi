@@ -19,4 +19,5 @@ for key, value in my_dict.iteritems():
     if value > maxnum:
         maxnum = value
     out_file.write(str(value) + '\n')
+
 print maxnum
