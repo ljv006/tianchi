@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5eab2b3-8a13-4d4b-b149-de6f44b5a292" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/test_A_20171225.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/GBR.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/ridge_regression.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/temp.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/test_data" afterPath="$PROJECT_DIR$/input/test_data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/train_20171215.txt" afterPath="$PROJECT_DIR$/input/train_20171215.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/logistic_regression.py" afterPath="$PROJECT_DIR$/models/logistic_regression.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/out.txt" afterPath="$PROJECT_DIR$/output/out.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -649,7 +641,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517305532848</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="GBR">
+      <created>1517584214110</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1517584214110</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -685,7 +684,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lr" />
     <MESSAGE value="random_forest" />
-    <option name="LAST_COMMIT_MESSAGE" value="random_forest" />
+    <MESSAGE value="GBR" />
+    <option name="LAST_COMMIT_MESSAGE" value="GBR" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
