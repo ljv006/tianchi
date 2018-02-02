@@ -10,7 +10,7 @@ for line in file:
     input_x.append([float(list[0]) / 1032, float(list[1]) / 7])
     input_y.append([float(list[2]) / 7226])
 # 一些参数
-training_epochs = 10000
+training_epochs = 100000
 batch_size = 1000
 display_step = 10
 example_num = len(input_x)
@@ -22,12 +22,13 @@ y = tf.placeholder(tf.float32, [None, 1])
 W = tf.Variable(tf.random_uniform([2,1], -1.0, 1.0))
 b = tf.Variable(tf.ones([1]))
 global_step = tf.Variable(0)
-pred = tf.matmul(x, W) + b
-# learning_rate = tf.train.exponential_decay(1e-2,global_step,decay_steps=example_num/batch_size,decay_rate=0.98,staircase=True)
-learning_rate = 0.05
-
+theta = tf.Variable(tf.zeros([2, 1]))
+theta0 = tf.Variable(tf.zeros([1, 1]))
+pred = 1 / (1 + tf.exp(-tf.matmul(x, theta) + theta0))
+learning_rate = tf.train.exponential_decay(1e-2,global_step,decay_steps=example_num,decay_rate=0.98,staircase=True)
+# learning_rate = 0.05
 # 损失函数用mean squared error
-cost = tf.reduce_mean(tf.square(pred - y))
+cost = tf.reduce_mean(-y * tf.log(pred) - (1 - y) * tf.log(1 - pred))
 tf.summary.scalar('learnging_rate', learning_rate)
 tf.summary.scalar('cost', cost)
 # 梯度下降优化
