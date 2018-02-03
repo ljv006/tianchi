@@ -19,7 +19,7 @@ df_train_target = actions1['count1'].values
 df_train_data = actions1.drop(['count1'],axis = 1).values
 
 # 切分数据（训练集和测试集）
-cv = cross_validation.ShuffleSplit(len(df_train_data), n_iter=5, test_size=0.2,random_state=0)
+cv = cross_validation.ShuffleSplit(len(df_train_data), n_iter=100, test_size=0.2,random_state=0)
 
 print "GradientBoostingRegressor"
 gbdt = GradientBoostingRegressor()
